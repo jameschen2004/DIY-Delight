@@ -68,7 +68,7 @@ const CreateCar = () => {
         try {
             const newItem = await createCustomItem(formState);
             setStatusMessage({ type: 'success', text: `Item "${newItem.item_name}" created successfully!` });
-            setTimeout(() => navigate(`/cars/${newItem.id}`), 1500);
+            setTimeout(() => navigate(`/customcars/${newItem.id}`), 1500);
         } catch (err) {
             // This catches server-side validation (like the DB constraint)
             setStatusMessage({ type: 'error', text: 'Submission Error: ' + (err.message || 'Check console.') });

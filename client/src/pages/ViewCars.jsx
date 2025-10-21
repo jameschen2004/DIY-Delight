@@ -59,7 +59,7 @@ const ViewCars = () => {
                             <p className="item-price">Total Price: ${parseFloat(item.price).toFixed(2)}</p>
                             <div className="item-actions">
                                 {/* Link to view details (and edit/delete from detail page) */}
-                                <Link to={`/cars/${item.id}`} className="button view-button">View Details</Link>
+                                <Link to={`/customcars/${item.id}`} className="button view-button">View Details</Link>
                                 {/* Button to delete directly from the list (REQUIRED FEATURE) */}
                                 <button 
                                     onClick={() => handleDelete(item.id, item.item_name)}

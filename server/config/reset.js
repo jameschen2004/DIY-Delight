@@ -1,5 +1,5 @@
 import { pool } from "./database.js";
-
+import "../config/dotenv.js";
 // You can create a small dummy data file if you want to initially populate the table, 
 // but for a customization app, starting empty or with one example is often more realistic.
 // Let's assume you have a 'data/initialItems.js' file for demonstration.

@@ -5,6 +5,8 @@ import './config/dotenv.js'
 import customItemsRouter from './routes/customItems.js'
 import cors from 'cors'
 
+console.log('PGHOST loaded:', process.env.PGHOST);
+
 const app = express()
 
 // --------------------------- Middleware ---------------------------

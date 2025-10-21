@@ -6,7 +6,7 @@ import { BASE_PRICE, FEATURE_OPTIONS } from '../utilities/constants';
 import '../App.css';
 
 const EditCar = () => {
-    const { carId } = useParams();
+    const { id: carId } = useParams();
     const navigate = useNavigate();
     const [formState, setFormState] = useState(null);
     const [price, setPrice] = useState(BASE_PRICE);
@@ -76,7 +76,7 @@ const EditCar = () => {
         try {
             const updatedItem = await updateCustomItem(carId, formState); 
             setStatusMessage({ type: 'success', text: `Item "${updatedItem.item_name}" updated successfully!` });
-            setTimeout(() => navigate(`/cars/${updatedItem.id}`), 1500);
+            setTimeout(() => navigate(`/customcars/${updatedItem.id}`), 1500);
         } catch (err) {
             setStatusMessage({ type: 'error', text: 'Update Error: ' + (err.message || 'Check console.') });
             console.error(err);

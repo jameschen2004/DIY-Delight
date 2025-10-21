@@ -4,7 +4,7 @@ import { getCustomItemById, deleteCustomItem } from '../services/CustomItemsAPI'
 import '../App.css'; 
 
 const CarDetails = () => {
-    const { carId } = useParams(); // Get the ID from the URL (e.g., /cars/1)
+    const { id: carId } = useParams(); // Get the ID from the URL (e.g., /cars/1)
     const navigate = useNavigate();
     const [item, setItem] = useState(null);
     const [loading, setLoading] = useState(true);
